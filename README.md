@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+In this project, let's build a **Read More/Less** by applying the concepts we have learned till now.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Refer to the image below:
 
-## Available Scripts
+<br/>
+<div style="text-align: center;">
+    <img src="https://assets.ccbp.in/frontend/content/react-js-hooks/read-more-less-output-v0.gif" alt="read more read less output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+</div>
+<br/>
 
-In the project directory, you can run:
+### Design Files
 
-### `npm start`
+<details>
+<summary>Click to view</summary>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js-hooks/read-more-less-sm-outputs-v0.png)
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Read Less](https://assets.ccbp.in/frontend/content/react-js-hooks/read-less-lg-output-v0.png)
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Read More](https://assets.ccbp.in/frontend/content/react-js-hooks/read-more-lg-output-v0.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</details>
 
-### `npm test`
+### Set Up Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<details>
+<summary>Click to view</summary>
 
-### `npm run build`
+- Download dependencies by running `npm install`
+- Start up the app using `npm start`
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Completion Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+<summary>Functionality to be added</summary>
+<br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app must have the following functionalities
 
-### `npm run eject`
+- When the app is opened,
+  - The text should be shortened to the first one hundred and seventy characters from the given reactHooksDescription and should be displayed
+  - **Read More** button should be displayed
+- When the **Read More** button is clicked,
+  - The total text from the given reactHooksDescription should be displayed
+  - **Read Less** button should be displayed
+- When the **Read Less** button is clicked,
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  - The text should be shortened to the first one hundred and seventy characters from the given reactHooksDescription and should be displayed
+  - **Read More** button should be displayed
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The `ReadMoreReadLess` component receives the `reactHooksDescription` as a prop with String data type
+  </details>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<details>
+<summary>Implementation Files</summary>
+<br/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Use these files to complete the implementation:
 
-## Learn More
+- `src/components/ReadMore/index.js`
+- `src/components/ReadMore/styledComponents.js`
+</details>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Quick Tips
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<details close>
+<summary>Click to view</summary>
+<br>
 
-### Code Splitting
+- To extract the part of the string we can use the `slice()`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  ```js
+  const text = "Hello world!";
+  const slicedText = text.slice(0, 5); // Hello
+  ```
 
-### Analyzing the Bundle Size
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Important Note
 
-### Making a Progressive Web App
+<details>
+<summary>Click to view</summary>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br/>
 
-### Advanced Configuration
+**The following instructions are required for the tests to pass**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Styled Components** should be used for styling purposes
+- **Roboto** should be applied as `font-family` for **React Hooks** heading
 
-### Deployment
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Resources
 
-### `npm run build` fails to minify
+<details>
+<summary>Image URLs</summary>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [https://assets.ccbp.in/frontend/hooks/react-hooks-img.png](https://assets.ccbp.in/frontend/hooks/react-hooks-img.png) alt should be **react hooks**
+
+</details>
+
+<details>
+<summary>Colors</summary>
+
+<br/>
+
+<div style="background-color: #1e293b; width: 150px; padding: 10px; color: white">Hex: #1e293b</div>
+<div style="background-color: #334155; width: 150px; padding: 10px; color: white">Hex: #334155</div>
+<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
+<div style="background-color: #1f81ff; width: 150px; padding: 10px; color: white">Hex: #1f81ff</div>
+<br/>
+</details>
+
+<details>
+<summary>Font-families</summary>
+
+- Roboto
+
+</details>
+
+> ### _Things to Keep in Mind_
+>
+> - All components you implement should go in the `src/components` directory.
+> - Don't change the component folder names as those are the files being imported into the tests.
+> - **Do not remove the pre-filled code**
+> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
